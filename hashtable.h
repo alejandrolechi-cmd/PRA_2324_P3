@@ -103,6 +103,22 @@ public:
         return search(key); // igual que search
     }
 
+    // MÉTODO REHASH AÑADIDO
+    HashTable<V> rehash() {
+        // Crear nueva tabla con el doble de capacidad
+        HashTable<V> nuevaTabla(max * 2);
+
+        // Recorrer todas las cubetas
+        for (int i = 0; i < max; i++) {
+            for (int j = 0; j < table[i].size(); j++) {
+                TableEntry<V> e = table[i][j];
+                nuevaTabla.insert(e.key, e.value);
+            }
+        }
+
+        return nuevaTabla;
+    }
+
     // Impresión
     friend std::ostream& operator<<(std::ostream &out, const HashTable<V> &th){
         out << "HashTable [entries: " << th.n << ", capacity: " << th.max << "]\n";
@@ -117,3 +133,4 @@ public:
 };
 
 #endif
+
