@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include "Dict.h"
 #include "TableEntry.h"
-#include "../../Practica1/PRA_2324_P1/ListLinked.h"  // Ajusta la ruta según tu proyecto
+#include "../../Practica1/PRA_2324_P1/ListLinked.h"  
 
 template <typename V>
 class HashTable: public Dict<V> {
@@ -13,7 +13,7 @@ class HashTable: public Dict<V> {
 private:
     int n; // número de entradas
     int max; // capacidad de la tabla
-    ListLinked<TableEntry<V>>* table; // array de punteros a listas
+    ListLinked<TableEntry<V>>* table; 
 
 public:
 
@@ -119,7 +119,7 @@ public:
         return nuevaTabla;
     }
 
-    // Impresión
+    
     friend std::ostream& operator<<(std::ostream &out, const HashTable<V> &th){
         out << "HashTable [entries: " << th.n << ", capacity: " << th.max << "]\n";
         out << "==============\n";
