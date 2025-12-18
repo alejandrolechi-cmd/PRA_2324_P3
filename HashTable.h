@@ -103,7 +103,7 @@ public:
         return search(key); // igual que search
     }
 
-    // MÉTODO REHASH AÑADIDO
+    // MÉTODO REHASH EXAMEN
     HashTable<V> rehash() {
         // Crear nueva tabla con el doble de capacidad
         HashTable<V> nuevaTabla(max * 2);
