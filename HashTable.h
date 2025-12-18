@@ -108,7 +108,7 @@ public:
         // Crear nueva tabla con el doble de capacidad
         HashTable<V> nuevaTabla(max * 2);
 
-        // Recorrer todas las cubetas
+        // Recorremos
         for (int i = 0; i < max; i++) {
             for (int j = 0; j < table[i].size(); j++) {
                 TableEntry<V> e = table[i][j];
